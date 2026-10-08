@@ -1,3 +1,12 @@
+<?php
+require_once '../includes/config.php';
+require_once '../includes/auth.php';
+checkLogin();
+
+$title = "Lista de Clientes";
+require_once '../includes/header.php';
+require_once '../includes/navbar.php';
+?>
 <section class="section">
     <div class="container">
         <div class="level">

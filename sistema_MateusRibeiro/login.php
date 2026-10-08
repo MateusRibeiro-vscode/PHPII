@@ -14,9 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     }else{
         try{
             // Consulta o usuário no banco
-            $sql = "SELECT * FROM usuario WHERE username = :username";
+            $sql = "SELECT * FROM usuarios WHERE username = :username";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindValue(':username', $usuername, PDO::PARAM_STR);
+            $stmt->bindValue(':username', $username, PDO::PARAM_STR);
             $stmt->execute();
 
 
@@ -63,7 +63,7 @@ include 'includes/header.php'
                         <div class="field">
                             <label class="label">Usuário</label>
                             <div class="control has-icons-left">
-                                <input class="input" type="text" name="usuername" required>
+                                <input class="input" type="text" name="username" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>

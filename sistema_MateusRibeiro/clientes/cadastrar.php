@@ -1,3 +1,23 @@
+<?php
+require_once '../includes/config.php';
+require_once '../includes/auth.php';
+checkLogin();
+
+$title = "Lista de Clientes";
+require_once '../includes/header.php';
+require_once '../includes/navbar.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+   try{
+    $stmt = $pdo->prepare("INSERT INTO clientes
+    (responsavel, nome_fantasia, tipo, documento, endereco, telefone, email)
+    VALUES (?, ?, ?, ?, ?, ?, ?)");
+
+   }catch{
+
+   } 
+}
+?>
 <section class="section">
     <div class="container">
         <h1 class="title">Cadastrar Novo Cliente</h1>
